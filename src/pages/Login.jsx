@@ -27,7 +27,7 @@ function Login() {
 
     // (if you already store role, keep that part too)
 
-    navigate("/dashboard");
+    window.location.href = "/dashboard";
   } catch (err) {
     alert(err.response?.data || "Login failed");
   }
