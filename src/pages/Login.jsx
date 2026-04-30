@@ -23,7 +23,8 @@ function Login() {
   try {
     const res = await API.post("/auth/login", { email, password });
 
-    localStorage.setItem("token", res.data);
+    localStorage.setItem("token", res.data.token);
+localStorage.setItem("role", res.data.role);
 
     // (if you already store role, keep that part too)
 
